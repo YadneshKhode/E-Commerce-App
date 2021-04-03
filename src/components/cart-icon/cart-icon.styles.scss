@@ -10,9 +10,7 @@
     width: 35px;
     // height: 24px;
   }
-  .shopping-icon:hover {
-    transform: scale(1.1);
-  }
+
 
   .item-count {
     position: absolute;
@@ -24,5 +22,11 @@
 @media only screen and (max-width: 767px) {
   .cart-icon .item-count {
     bottom: 3%;
+  }
+}
+@media only screen and (min-width: 900px) {
+
+  .shopping-icon:hover {
+    transform: scale(1.1);
   }
 }

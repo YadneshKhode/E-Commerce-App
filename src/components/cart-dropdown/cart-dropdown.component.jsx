@@ -8,6 +8,21 @@ import { createStructuredSelector } from "reselect";
 import { withRouter } from "react-router-dom";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 const CartDropDown = ({ cartItems, history, dispatch }) => {
+  function handleChange() {
+    const header = document.querySelector(".header");
+    const logoContainer = document.querySelector(".logo-container");
+    const menuBtn = document.querySelector(".menu-btn");
+    const options = document.querySelector(".options");
+    const html = document.querySelector("html");
+    const menuBtnBurger = document.querySelector(".menu-btn__burger");
+    header.classList.toggle("active");
+    logoContainer.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+    menuBtn.classList.toggle("open");
+    options.classList.toggle("active");
+    menuBtnBurger.classList.toggle("active");
+    html.classList.toggle("noscroll");
+  }
   return (
     <div className="cart-dropdown">
       <div className="cart-items">
@@ -22,6 +37,7 @@ const CartDropDown = ({ cartItems, history, dispatch }) => {
       <CustomButton
         onClick={() => {
           history.push("/checkout");
+          handleChange();
           dispatch(toggleCartHidden());
         }}
       >
@@ -41,6 +57,4 @@ const mapStateToProps = createStructuredSelector({
 //   toggleCartHidden: () => dispatch(toggleCartHidden()),
 // });
 
-export default withRouter(
-  connect(mapStateToProps)(CartDropDown)
-);
+export default withRouter(connect(mapStateToProps)(CartDropDown));

@@ -8,7 +8,7 @@
   align-items: center;
 
   .image-container {
-    width: 23%;
+    width: 17%;
     padding-right: 15px;
 
     img {
@@ -27,7 +27,7 @@
     display: flex;
 
     .arrow {
-      cursor: pointer
+      cursor: pointer;
     }
 
     .value {
@@ -38,5 +38,117 @@
   .remove-button {
     padding-left: 12px;
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .name,
+  .quantity,
+  .price {
+    width: 20%;
+  }
+  .checkout-item {
+    .quantity {
+      .value {
+        margin: 0 8px;
+      }
+    }
+    .image-container {
+      width: 15%;
+      padding-right: 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .quantity {
+      .value {
+        margin: 0 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 490px) {
+    .name,
+    .quantity,
+    .price {
+      width: 18%;
+    }
+    .checkout-item {
+      .quantity {
+        .value {
+          margin: 0 6px;
+        }
+      }
+      .image-container {
+        width: 13;
+        padding-right: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .quantity {
+        .value {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    .name,
+    .quantity,
+    .price {
+      width: 15%;
+    }
+    .checkout-item {
+      .quantity {
+        .value {
+          margin: 0 4px;
+        }
+      }
+      .image-container {
+        width: 11%;
+        padding-right: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .quantity {
+        .value {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 333px) {
+    .name,
+    .quantity,
+    .price {
+      width: 12%;
+    }
+    .checkout-item {
+      .quantity {
+        .value {
+          margin: 0 2px;
+        }
+      }
+      .image-container {
+        min-width: 9%;
+        padding-right: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .quantity {
+        .value {
+          margin: 0 10px;
+        }
+      }
+    }
   }
 }

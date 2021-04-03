@@ -13,7 +13,7 @@ const CartIcon = ({ toggleCartHidden, itemCount }) => {
       <span className="item-count">{itemCount}</span>
     </div>
   );
-};
+}; 
 //This below code of reduce method is called as selector because it pulls whole state and then slices a small part of state
 // const mapStateToProps = (state) => ({
 //   itemCount: selectCartItemsCount(state),
